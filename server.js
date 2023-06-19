@@ -1,5 +1,5 @@
 require('dotenv').config()
-
+const bodyParser = require('body-parser')
 const express = require('express')
 const mongoose = require('mongoose')
 const userRoutes = require('./routes/userRoutes')
@@ -10,8 +10,12 @@ const result = require('./routes/resultRoutes')
 // express app
 const app = express()
 
+
+app.set("view engine","ejs");
 // middleware
 app.use(express.json())
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
 app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
