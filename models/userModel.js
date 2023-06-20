@@ -18,17 +18,17 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    role: {
-        type: String,
-    },
-    verified: {
-        type: Boolean,
-    },
-    suspended: {
-        type: Boolean,
-    },
-    profile: { type: String },
-    school:  { type: String }
+    // role: {
+    //     type: String,
+    // },
+    // verified: {
+    //     type: Boolean,
+    // },
+    // suspended: {
+    //     type: Boolean,
+    // },
+    // profile: { type: String },
+    // school:  { type: String }
 })
 
 
